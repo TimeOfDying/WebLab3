@@ -1,0 +1,3 @@
+[{"id":"1", "name":"Jadeslinger", "image":"Jadeslinger.png", "power":"1", "speed":"20"}, 
+{"id":"2", "name":"Red Shadow", "image":"RedShadow.png", "power":"5", "speed":"30"},
+{"id":"3", "name":"Silentkill", "image":"Silentkill.png", "power":"50", "speed":"40"}]
