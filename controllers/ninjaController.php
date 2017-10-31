@@ -16,6 +16,8 @@ class ninjaController extends Controller {
 	}
 	
 	public function add() {
+
+		$_POST=json_decode(file_get_contents('php://input'),true);
 		
 		if( (isset($_POST['id'])) && (isset($_POST['name'])) && (isset($_POST['image'])) && (isset($_POST['power'])) && (isset($_POST['speed'])) ) {
 				$dataToSave=array( 'id'=>$_POST['id'], 'name'=>$_POST['name'], 'image'=>$_POST['image'], 'power'=>$_POST['power'], 'speed'=>$_POST['speed']);
@@ -27,11 +29,11 @@ class ninjaController extends Controller {
 	
 	public function edit($data) {
 		
-		$_PUT=json_decode(file_get_contents('php://input'));
+		$_PUT=json_decode(file_get_contents('php://input'),true);
 		
 		if((isset($_POST['id'])) && (isset($_POST['name'])) && (isset($_POST['image'])) && (isset($_POST['power'])) && (isset($_POST['speed']))) {
 			$dataToUpdate=array('id'=>$_POST['id'],'name'=>$_POST['name'],'image'=>$_POST['image'], 'power'=>$_POST['power'], 'speed'=>$_POST['speed']);
-			$updatedItem=$this->model->save($dataToUpdate, $data['id']);
+			$updatedItem=$this->model->save($data['id'], $dataToUpdate);
 			$this->setResponce($updatedItem);
 			}
 

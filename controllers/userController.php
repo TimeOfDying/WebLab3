@@ -17,6 +17,8 @@ class userController extends Controller {
 	
 	public function add() {
 
+		$_POST=json_decode(file_get_contents('php://input'),true);
+
 		if( (isset($_POST['id'])) && (isset($_POST['name'])) && (isset($_POST['score'])) ){
 			$dataToSave=array('id'=>$_POST['id'], 'name'=>$_POST['name'], 'score'=>$_POST['score']);
 			$addedItem=$this->model->create($dataToSave);
@@ -27,11 +29,11 @@ class userController extends Controller {
 	
 	public function edit($data) {
 
-		$_PUT=json_decode(file_get_contents('php://input'));
+		$_PUT=json_decode(file_get_contents('php://input'),true);
 
 		if((isset($_PUT['id']))&&(isset($_PUT['name']))&&(isset($_PUT['score']))){
 			$dataToUpdate=array('id'=>$_PUT['id'], 'name'=>$_PUT['name'], 'score'=>$_PUT['score'] );
-			$updatedItem=$this->model->save($dataToUpdate, $data['id']);
+			$updatedItem=$this->model->save($data['id'], $dataToUpdate);
 			$this->setResponce($updatedItem);
 		}
 
