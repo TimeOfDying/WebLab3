@@ -1,0 +1,8 @@
+<div class="game_over" ng-controller="gameController">
+    <h1>Конец игры</h1>
+    <p>Набрано {{totalScore}} очков. Введите ваш никнейм:</p>
+    <form name=entername>
+        <p><input name="username" ng-model="username"><p>
+        <button ng-click="sendData()">Отправить</button>
+    </form>
+</div>

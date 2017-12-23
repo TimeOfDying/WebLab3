@@ -1,0 +1,145 @@
+body {
+    background: url(../img/background.jpg);
+}
+
+.menu {
+    display: inline-block;
+    width: 80%;
+}
+
+.menu_element {
+    font-size: large;
+    color: white;
+    padding: 2% 8%;
+    background-color: #353535;
+    box-shadow: 2px 2px 2px #111;
+
+}
+
+
+.menu_element:hover {
+    background-color: #c0392b;
+}
+
+
+.logo {
+	float:left;
+	width:10%;
+	padding-right: 10px;
+	padding-left: 10px;
+    text-shadow: 2px 2px 2px #111;
+    size: 40px;
+
+}
+
+.logo h1 a
+{
+	font-size: 30px;
+}
+
+
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  border-radius: 53px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 20px;
+  background: #c0392b;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px #111;
+}
+
+.first-paragraph {
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  letter-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.second-paragraph{
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+  letter-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+th {
+	padding: 10px;
+}
+
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid black;
+}
+
+h1 
+{
+	font-size: large;
+}
+
+a
+{
+	text-decoration: none;
+	color: white;
+}
+
+ul li 
+{
+	display: inline;
+}
+
+ul 
+{
+	margin: 0;
+	padding: 2% 0;
+	font-size: 0;
+}
+
+
+.ninja {
+	width: 100px;
+	height: 100px;
+}
+
+.image-ninja
+{
+	width:100px;
+}
+
+.topListPage
+{
+	color:white;
+}
+
+.game_over h1 
+{
+	color:white;
+}
+
+.game_over p
+{
+	color:white;
+}
+
+h2
+{
+	color:white;
+}
